@@ -1,0 +1,18 @@
+.container-bg{
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    padding: 10%;
+}
+
+.btn-w{
+    width: 90%;
+}
+
+#link{
+    font-size: large;
+}
+
+.pict{
+    width: 100%;
+    padding: 2%;
+}

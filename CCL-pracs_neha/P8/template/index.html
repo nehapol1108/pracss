@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX</title>
+</head>
+<!-- Create a web-app which uses the weather API to forecast the weather by taking latitude,
+longitude and an ‘hourly’ parameter and/ ‘daily’ parameter.
+https://open-meteo.com/en/docs#api-documentation
+
+Input : Correct Input , expected output: Proper location
+Input: Incorrect Input, expected output: An err page showing proper err message
+and ask user to fill correct input.
+Validations:-
+Restrict user to enter only required digits. No alphabet should be accepted and
+displayed. -->
+<body>
+
+    <!-- The step attribute specifies the interval between legal numbers in an <input> element.
+Example: if step="3", legal numbers could be -3, 0, 3, 6, etc. -->
+    <form action="post" action="/">
+        <label>Latitude</label>
+        <input type="text" pattern="[0-9]+([.][0-9]+)?" maxlength="6" 
+        oninput="this.value = this.value.replace(/[^0-9.]/g,'')" name="latitude" step="0.01" required>
+
+        <br>
+        <!-- https://api.open-meteo.com/v1/forecast?latitude=38.8951&longitude=-77.0364&current_weather=true -->
+        <label>Longitude</label>
+        <input type="text" pattern="[0-9]+([.][0-9]+)?" maxlength="6" 
+        oninput="this.value = this.value.replace(/[^0-9.]/g,'')" name="longitude" step="0.01" required>
+        <br>
+        <button type="submit">SUBMIT</button>
+        <button type="reset">RESET</button>
+    </form>
+</body>
+</html>
+

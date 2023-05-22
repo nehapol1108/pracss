@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PINCODE</title>
+</head>
+<!-- Create a web-app which takes the zip-code of the area, the name of the branch as input,
+and sends the nearest post-office details. http://www.postalpincode.in/Api-Details
+
+Input : Correct Pin-code , expected output: a welcome page
+Input: Incorrect Pin-code, expected output : An error page showing proper err
+message and ask user to fill correct input.
+Validations:-
+Restrict user to enter only 6 digits. No alphabet should be displayed, and no 7th
+digit should be accepted. -->
+<body>
+    <form action="post" action="/">
+        <label>Enter pincode</label>
+        <input type="number" pattern="\d*" oninput="this.value=this.value.replace(/[^0-9]/g,'').substring(0,6)" maxlength="6" required
+        title="Please enter 6 digits" name="pincode">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
