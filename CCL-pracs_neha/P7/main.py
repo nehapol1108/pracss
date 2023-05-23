@@ -24,3 +24,4 @@ class MainPage(webapp2.RequestHandler):
             path = os.path.join(os.path.dirname(__file__),'template/error.html')
         self.response.out.write(template.render(path,temp))
 app = webapp2.WSGIApplication([('/',MainPage)],deubg=True)
+

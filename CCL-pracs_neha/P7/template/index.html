@@ -16,12 +16,15 @@ Validations:-
 Restrict user to enter only 6 digits. No alphabet should be displayed, and no 7th
 digit should be accepted. -->
 <body>
-    <form action="post" action="/">
+    <form method="post" action="/">
         <label>Enter pincode</label>
         <input type="number" pattern="\d*" oninput="this.value=this.value.replace(/[^0-9]/g,'').substring(0,6)" maxlength="6" required
         title="Please enter 6 digits" name="pincode">
         <button type="submit">Submit</button>
     </form>
+
+
+    <input type="number" pattern="\d*" oninput="this.value=this.value.replace(/[^0-9]/g,'').substring(0,6)" maxlength="6" required>
 </body>
 </html>
 
